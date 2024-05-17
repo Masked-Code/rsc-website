@@ -1,22 +1,33 @@
 <template>
-  <div class="flex justify-center items-center min-h-96 m-[5%]">
+  <div class="flex flex-col justify-center items-center min-h-96 m-[5%]">
   <div
-      class="gradient-text text-8xl font-bold"
+      class="gradient-text text-8xl font-bold mb-4"
       :style="{ animationDuration: animationDuration }"
     >
     Rocket Soccer Confederation
+    </div>
+    <div class="text-xl">
+      Tournaments for Rocket League players, by Rocket League players.
+    </div>
+    <div v-if="user" class="m-4">
+      <UButton to="/dashboard">Dashboard</UButton>
+    </div>
+    <div v-else class="m-4">
+      <UButton to="/gettingstarted">Get Started</UButton>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 const animationDuration = `5s`
+const user = useSupabaseUser()
+
 </script>
 
 <style scoped>
 .gradient-text {
   display: inline-block;
-  background: linear-gradient(90deg, #a963f0, #7a61f3, #7a61f3, #a963f0);
+  background: linear-gradient(90deg, #b972ff, #6750db, #6750db, #b972ff);
   background-size: 200% 100%;
   background-clip: text;
   -webkit-background-clip: text;
