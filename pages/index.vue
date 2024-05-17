@@ -6,8 +6,8 @@
     >
     Rocket Soccer Confederation
     </div>
-    <div class="text-xl">
-      Tournaments for Rocket League players, by Rocket League players.
+    <div class="text-xl text-red-600">
+      This project is canceled. For more information please contact me on Discord.
     </div>
     <div v-if="user" class="m-4">
       <UButton to="/dashboard">Dashboard</UButton>
